@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Faculty+Glyphic&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Rubik:ital,wght@0,300..900;1,300..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Faculty+Glyphic&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Rubik:ital,wght@0,300..900;1,300..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    /*background-image: linear-gradient(to right, #89889a, #a7a0a8, #0b1213);*/ 
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 100px;  
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo{
+    margin-left: 30px;
+    height: 90px;
+}
+
+.imagenLogo{
+    height: 90px;
+}
+
+
+nav ul{
+    display: flex;
+    right: 0;
+    top: 0;
+    color: white;
+    margin: 0;
+    list-style: none;
+    padding:0;
+}
+
+nav ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px 40px 0px 40px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+}
+
+nav ul li a:hover{
+    color: #dfb135;
+    cursor: pointer;
+    
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #dfb135;
+    transition: all .5s;
+}
+nav ul li a:hover::before{
+    width: 100%
+}
+
+.mostrar-menu{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+    
+}
+#check{
+    display: none;
+}
+main{
+    margin: 0;
+    padding: 0;
+    display:block;
+    background-image: linear-gradient(to right, #a8ccc6, #dacccc, #738188);
+    height: 100%;
+}
+
+.content{
+    display: block;
+    padding-left: 30px;
+    animation: aparicion 1s ease-in forwards;
+}
+
+@keyframes aparicion{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.contenedor1{
+    display:flex;
+   align-items: center;
+}
+h2{
+    padding: 20px 0 30px 0;
+    color: black;
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    
+}
+.imagen1{
+    height: 600px;
+    margin-right: 40px;
+    width: 40%;
+    transition: all .5s;
+}
+.imagen1:hover{
+    transform:scale(.9);
+    cursor: pointer;
+}
+video{
+    width: 500px;
+    height: 600px;
+    transition: all .5s;
+}
+
+video:hover{
+    transform: scaleY(.9);
+}
+.imagen2{
+    width: 22%;
+    height: 600px;
+    margin-right: 20px;
+    transition: all .5s;
+   
+}
+.imagen2:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+p{
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+.linea-division{
+    width: 100%;
+    background-color: black;
+    height: 3px;
+}
+
+.contenedor2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media(max-width: 1020px){
+    .mostrar-menu{
+        display: flex;
+        cursor: pointer;
+        right: 0;
+    }
+    .opc_nav{
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0; 
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+        
+    }
+    .opc_nav.mostrar {
+        display: flex; 
+        align-items: center;
+        color: white;
+        display: flex; 
+        align-items: center;
+        color: white;
+        display: flex; 
+        background-color: black; 
+        margin-top: 20px;
+    }
+    .contenedor1{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagen1, .imagen2{
+        width: 90%;
+    }
+}

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Faculty+Glyphic&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    /*background-image: linear-gradient(to right, #89889a, #a7a0a8, #0b1213);*/ 
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 100px;  
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo{
+    margin-left: 30px;
+    height: 90px;
+}
+
+.imagenLogo{
+    height: 90px;
+}
+
+
+nav ul{
+    display: flex;
+    right: 0;
+    top: 0;
+    color: white;
+    margin: 0;
+    list-style: none;
+    padding:0;
+}
+
+nav ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px 40px 0px 40px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+}
+
+nav ul li a:hover{
+    color: #dfb135;
+    cursor: pointer;
+    
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #dfb135;
+    transition: all .5s;
+}
+nav ul li a:hover::before{
+    width: 100%
+}
+
+.mostrar-menu{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+    
+}
+#check{
+    display: none;
+}
+main{
+    margin: 0;
+    padding: 0;
+    display:block;
+    background-image: linear-gradient(to right, #a8ccc6, #dacccc, #738188);
+    height: 100%;
+}
+
+main section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 30px 30px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+article{
+    width: 26vw;
+    
+}
+img{
+    width: 25vw;
+    height: 80vh;
+}
+article img:hover{
+    transform: scale(.9);
+    transition: all 1s;
+    cursor: pointer;
+}
+p{
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+}
+.tema{
+    width: 20%;
+    height: 30px;
+    color:#738188;
+    padding-left: 60px;
+}
+main.oscuro{
+    background-color: black;
+    width: 100%;
+    height: 100%
+}
+
+
+/*----------------------------------- diseño responsive ---------------------------- */
+@media(max-width: 1080px){
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    main section{
+        display: flex;
+        flex-wrap: wrap;
+        gap:150px;
+        
+    }
+   
+    article img{
+        width: 140%;
+        
+    }
+
+}
+@media(max-width: 920px){
+    .mostrar-menu{
+        display: flex;
+        cursor: pointer;
+    }
+    .opc_nav{
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0; 
+        width: 100%;
+        padding: 10px 0;
+    }
+    .opc_nav.mostrar {
+        display: flex; 
+        align-items: center;
+        color: white;
+        display: flex; 
+        background-color: #dfb135; 
+        margin-top: 20px;
+    }
+}
+@media(max-width: 842px){
+    .mostrar-menu{
+        display: flex;
+        cursor: pointer;
+    }
+    .opc_nav{
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0; 
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+        
+    }
+    .opc_nav.mostrar {
+        display: flex; 
+        align-items: center;
+        color: white;
+        display: flex; 
+        background-color: black; 
+        margin-top: 20px;
+        
+        
+       
+    }
+    main section{
+        display: flex;
+        flex-direction: column;
+
+    }
+    article{
+        padding:0 0 0 50px;
+        
+    }
+    article img{
+        width: 400%;
+        
+    }
+    article p{
+        width: 400%
+    }
+}
